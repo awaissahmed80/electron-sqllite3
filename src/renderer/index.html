@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HiTech Mobile Repairs Management</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    />    
+
+    <style>
+        .titleBar{
+            background-color: transparent;
+            position: absolute;
+            left:0;
+            right:0;
+            top:0;
+            text-align: center;
+            -webkit-app-select: none; /* <-- Add this line */
+            -webkit-app-region: drag; /* <-- Add this line */
+        }
+        .nonDraggable{
+            -webkit-app-select: initial;
+            -webkit-app-region: none;
+        }
+    </style>
+  </head>
+
+  <body>    
+    <!-- <div id="titleBarContainer" class="draggable">
+        <div id="titleBar" class="draggable titleBar bg-slate-400">
+          <span class="">Example PWA</span>
+          <input class="nonDraggable" type="text" placeholder="Search"></input>
+        </div>
+      </div> -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
